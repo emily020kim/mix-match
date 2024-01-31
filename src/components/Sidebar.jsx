@@ -42,6 +42,14 @@ const Sidebar = ({ user, closeToggle }) => {
               {category.name}
             </NavLink>
           ))}
+          <h3 className='mt-2 px-5 text-base text-white font-semibold 2xl:text-xl'>Mix n Match</h3>
+          <NavLink
+            to={'/outfit'}
+            className={({ isActive }) => isActive ? isActiveStyle : isNotActiveStyle}
+            onClick={handleCloseSidebar}
+          >
+            Create Outfit
+          </NavLink>
         </div>
       </div>
       {user && (

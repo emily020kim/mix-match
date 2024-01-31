@@ -8,7 +8,7 @@ import MasonryLayout from './MasonryLayout';
 import { clothesDetailMorePinQuery, clothesDetailQuery } from '../utils/data';
 import { Spinner } from '@chakra-ui/react'
 
-const PinDetail = ({ user }) => {
+const ClothesDetail = ({ user }) => {
   const { clothesId } = useParams();
   const [clothes, setClothes] = useState();
   const [clothesDetail, setClothesDetail] = useState();
@@ -147,4 +147,4 @@ const PinDetail = ({ user }) => {
   );
 };
 
-export default PinDetail;
+export default ClothesDetail;

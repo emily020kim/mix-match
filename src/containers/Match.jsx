@@ -6,6 +6,7 @@ import Search from '../components/Search'
 import Feed from '../components/Feed'
 import CreateClothes from '../components/CreateClothes'
 import ClothesDetail from '../components/ClothesDetail'
+import Outfit from '../components/Outfit'
 
 const Match = ({ user }) => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -22,6 +23,7 @@ const Match = ({ user }) => {
                     <Route path="/clothes-detail/:clothesId" element={<ClothesDetail user={user && user} />} />
                     <Route path="/create-clothes" element={<CreateClothes user={user && user} />} />
                     <Route path="/search" element={<Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
+                    <Route path="/outfit" element={<Outfit user={user && user} />} />
                 </Routes>
             </div>
         </div>

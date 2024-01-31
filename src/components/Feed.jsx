@@ -20,7 +20,7 @@ const Feed = () => {
       client.fetch(query)
         .then((data) => {
           setClothes(data);
-          setLoading(false)
+          setLoading(false);
         })
 
     } else {

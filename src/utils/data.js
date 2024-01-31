@@ -183,3 +183,15 @@ export const clothesDetailMorePinQuery = (clothes) => {
   }`;
   return query;
 };
+
+export const clothesCategoryQuery = (categoryId) => {
+  const query = `*[_type == "clothes" && _id == '${categoryId}]{
+    image{
+      asset->{
+        url
+      }
+    },
+    _id,
+  }`;
+  return query;
+}
