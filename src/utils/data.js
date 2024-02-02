@@ -11,9 +11,6 @@ export const categories = [
     {
         name: 'shoes',
     },
-    {
-        name: 'accessories',
-    },
 ]
 
 export const userQuery = (userId) => {

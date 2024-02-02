@@ -34,17 +34,17 @@ const Outfit = ({ user }) => {
     return (
         <div className="m-4">
             {user ? (
-                <div className="flex flex-col w-full h-full items-center justify-center">
-                    <Carousel infiniteLoop showArrows={true}>
+                <div className="flex flex-col items-center justify-center">
+                    <Carousel infiniteLoop showStatus={false}>
                         {clothes
                             .map((item, index) => {
-                                return <Image key={index} src={item.image.asset.url} objectFit='contain' height="300px" width="600px" />;
+                                return <Image key={index} src={item.image.asset.url} objectFit='contain' height="200px" width="300px" />;
                         })}
                     </Carousel>
-                    <Carousel infiniteLoop>
+                    <Carousel infiniteLoop showStatus={false}>
                         {clothes
                             .map((item, index) => {
-                                return <Image key={index} src={item.image.asset.url} objectFit='contain' height="300px" width="600px" />;
+                                return <Image key={index} src={item.image.asset.url} objectFit='contain' height="200px" width="300px" />;
                         })}
                     </Carousel>
                 </div>
