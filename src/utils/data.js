@@ -185,7 +185,7 @@ export const clothesDetailMorePinQuery = (clothes) => {
 };
 
 export const clothesCategoryQuery = (categoryId) => {
-  const query = `*[_type == "clothes" && _id == '${categoryId}]{
+  const query = `*[_type == "clothes" && category._ref == ${categoryId}]{
     image{
       asset->{
         url
