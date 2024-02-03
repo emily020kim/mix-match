@@ -9,7 +9,6 @@ import { Carousel } from "react-responsive-carousel"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Image } from "@chakra-ui/react"
 
-
 const Outfit = ({ user }) => {
     const [clothes, setClothes] = useState();
     const { categoryId } = useParams();
@@ -32,19 +31,19 @@ const Outfit = ({ user }) => {
     if (!clothes) return <Spinner />;
 
     return (
-        <div className="m-4">
+        <div>
             {user ? (
                 <div className="flex flex-col items-center justify-center">
-                    <Carousel infiniteLoop showStatus={false}>
+                    <Carousel infiniteLoop showStatus={false} showArrows={true} showIndicators={false} className="w-1/4 mt-12 bg-slate-200">
                         {clothes
                             .map((item, index) => {
-                                return <Image key={index} src={item.image.asset.url} objectFit='contain' height="200px" width="300px" />;
+                                return <Image key={index} src={item.image.asset.url} objectFit='contain' height="300px" width="300px" />;
                         })}
                     </Carousel>
-                    <Carousel infiniteLoop showStatus={false}>
+                    <Carousel infiniteLoop showStatus={false} showArrows={true} showIndicators={false} className="w-1/4 bg-slate-200">
                         {clothes
                             .map((item, index) => {
-                                return <Image key={index} src={item.image.asset.url} objectFit='contain' height="200px" width="300px" />;
+                                return <Image key={index} src={item.image.asset.url} objectFit='contain' height="300px" width="300px" />;
                         })}
                     </Carousel>
                 </div>
